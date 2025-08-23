@@ -1,6 +1,8 @@
 package org.example.my_practice_spring_exception.user.entity;
 
 import jakarta.persistence.*;
+import jakarta.servlet.ServletRequest;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -17,4 +19,11 @@ public class User {
     private String email;
     @Column(length = 50, nullable = false)
     private String password;
+
+    @Builder
+    public User(String username, String email, String password) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+    }
 }
