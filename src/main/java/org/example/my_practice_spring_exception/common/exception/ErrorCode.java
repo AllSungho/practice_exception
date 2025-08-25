@@ -7,7 +7,8 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum ErrorCode {
 
-    SESSION_NOT_EXIST("SESSION-401", "세션이 존재하지 않습니다.(로그인 요청 바람)");
+    SESSION_NOT_EXIST("SESSION-401", "세션이 존재하지 않습니다.(로그인 요청 바람)"),
+    NOT_VALID("VALID-401", "입력값 오류");
 
     private final String code;
     private final String message;
